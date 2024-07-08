@@ -10,12 +10,8 @@ services:
       DJANGO_SUPERUSER_USERNAME: admin
       DJANGO_SUPERUSER_PASSWORD: admin
       DJANGO_SUPERUSER_EMAIL: admin@email.com
-    command: sh -c "python3 manage.py migrate && DJANGO_SUPERUSER_PASSWORD=$${DJANGO_SUPERUSER_PASSWORD} python manage.py createsuperuser --username=$${DJANGO_SUPERUSER_USERNAME} --email=$${DJANGO_SUPERUSER_EMAIL} --noinput && python3 manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     volumes:
       - ./:/usr/src/app
-      - data_dev:/var/lib/sqlite
-volumes:
-  data_dev:
-    external: false
