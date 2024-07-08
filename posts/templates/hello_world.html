@@ -10,6 +10,11 @@
 <body>
     <h1>Hello World</h1>
     <p>{{ name }}</p>
-    
+    <h3>hobbies</h3>
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
