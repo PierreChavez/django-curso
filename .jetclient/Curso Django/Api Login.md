@@ -11,9 +11,9 @@ value = 'multipart/form-data'
 
 [[body.formData]]
 key = 'email'
-value = 'admin@email.com'
+value = 'pierre_chavez@outlook.com'
 
 [[body.formData]]
 key = 'password'
-value = 'admin'
+value = '12345'
 ```
